@@ -1,0 +1,11 @@
+[package]
+name = "cli"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "deposit_proof_convert"
+path = "src/deposit_proof_convert.rs"
+
+[dependencies]
+hex = "0.4.3"

@@ -24,7 +24,20 @@ nargo new deposit
 5) Create Deposit proof from /deposit/Prover.toml
 ```
 cd circuits/deposit
+nargo compile
 nargo execute
 bb prove -b ./target/zk.json -w ./target/zk.gz -o ./target  
 bb write_vk -b ./target/zk.json -o ./target
 ```
+
+6) Create new Cargo project:
+```
+cargo new cli
+```
+
+7) Run deposit_proof_convert.rs:
+```
+cargo run
+```
+
+
