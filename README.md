@@ -26,8 +26,8 @@ nargo new deposit
 cd circuits/deposit
 nargo compile
 nargo execute
-bb prove -b ./target/zk.json -w ./target/zk.gz -o ./target  
-bb write_vk -b ./target/zk.json -o ./target
+bb prove -b ./target/deposit.json -w ./target/deposit.gz -o ./target  
+bb write_vk -b ./target/deposit.json -o ./target
 ```
 
 6) Create new Cargo project:
@@ -38,6 +38,15 @@ cargo new cli
 7) Run deposit_proof_convert.rs:
 ```
 cargo run
+```
+
+8) Create Withdraw proof from /withdraw/Prover.toml
+```
+cd circuits/withdraw
+nargo compile
+nargo execute
+bb prove -b ./target/withdraw.json -w ./target/withdraw.gz -o ./target  
+bb write_vk -b ./target/withdraw.json -o ./target
 ```
 
 

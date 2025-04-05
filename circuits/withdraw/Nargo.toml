@@ -1,5 +1,5 @@
 [package]
-name = "deposit"
+name = "withdraw"
 type = "bin"
 authors = [""]
 
